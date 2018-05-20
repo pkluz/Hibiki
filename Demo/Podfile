@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '10.0'
+use_frameworks!
+inhibit_all_warnings!
+
+def all_pods
+    pod 'YYWebImage', '~> 1.0.5'
+end
+
+target "HibikiDemo" do
+	all_pods
+end

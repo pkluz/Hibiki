@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		212C62C72CBA4F9B6A90C395 /* Pods_HibikiDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0FBAA713F89E6AAEE6F453 /* Pods_HibikiDemo.framework */; };
+		27AE692E1ED2B8FC00AFD107 /* HibikiImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AE692D1ED2B8FC00AFD107 /* HibikiImageManager.m */; };
+		27B963971E1BACE600F32BAE /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B963941E1BACE600F32BAE /* DemoViewController.m */; };
+		27B963981E1BACE600F32BAE /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B963961E1BACE600F32BAE /* PreviewViewController.m */; };
+		27F977221E1B933C00AFB315 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F977211E1B933C00AFB315 /* main.m */; };
+		27F977251E1B933C00AFB315 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F977241E1B933C00AFB315 /* AppDelegate.m */; };
+		27F9772B1E1B933C00AFB315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F977291E1B933C00AFB315 /* Main.storyboard */; };
+		27F9772D1E1B933C00AFB315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F9772C1E1B933C00AFB315 /* Assets.xcassets */; };
+		27F977301E1B933C00AFB315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9772E1E1B933C00AFB315 /* LaunchScreen.storyboard */; };
+		F7F281321EB45F8E000C5561 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F281311EB45F8E000C5561 /* PhotoCell.m */; };
+		F7F281851EB6E39B000C5561 /* HibikiPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2817E1EB6E39B000C5561 /* HibikiPhotoViewer.m */; };
+		F7F281861EB6E39B000C5561 /* HibikiPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F281801EB6E39B000C5561 /* HibikiPhoto.m */; };
+		F7F281871EB6E39B000C5561 /* HibikiPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F281821EB6E39B000C5561 /* HibikiPhotoView.m */; };
+		F7F281881EB6E39B000C5561 /* HibikiProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F281841EB6E39B000C5561 /* HibikiProgressLayer.m */; };
+		F7F2818A1EB6E3F5000C5561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F281891EB6E3F5000C5561 /* UIKit.framework */; };
+		F7F2818C1EB6E3FE000C5561 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F2818B1EB6E3FE000C5561 /* CoreFoundation.framework */; };
+		F7F2818E1EB6E405000C5561 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F2818D1EB6E405000C5561 /* QuartzCore.framework */; };
+		F7F281901EB6E40B000C5561 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F2818F1EB6E40B000C5561 /* AssetsLibrary.framework */; };
+		F7F281921EB6E412000C5561 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F281911EB6E412000C5561 /* ImageIO.framework */; };
+		F7F281941EB6E418000C5561 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F281931EB6E418000C5561 /* Accelerate.framework */; };
+		F7F281961EB6E41F000C5561 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F281951EB6E41F000C5561 /* MobileCoreServices.framework */; };
+		F7F281981EB6E429000C5561 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F281971EB6E429000C5561 /* libsqlite3.tbd */; };
+		F7F2819A1EB6E42F000C5561 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F281991EB6E42F000C5561 /* libz.tbd */; };
+		F906D7B020B1A397005BB60E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F906D7AF20B1A397005BB60E /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C0FBAA713F89E6AAEE6F453 /* Pods_HibikiDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HibikiDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A29A9B91369576BA05CAF4 /* Pods-HibikiDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HibikiDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HibikiDemo/Pods-HibikiDemo.release.xcconfig"; sourceTree = "<group>"; };
+		27AE692A1ED29B1F00AFD107 /* HibikiImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HibikiImageManager.h; sourceTree = "<group>"; };
+		27AE692D1ED2B8FC00AFD107 /* HibikiImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HibikiImageManager.m; sourceTree = "<group>"; };
+		27AE692F1ED2C19600AFD107 /* HibikiImageManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HibikiImageManagerProtocol.h; sourceTree = "<group>"; };
+		27B963931E1BACE600F32BAE /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		27B963941E1BACE600F32BAE /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		27B963951E1BACE600F32BAE /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		27B963961E1BACE600F32BAE /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		27F9771D1E1B933C00AFB315 /* HibikiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HibikiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27F977211E1B933C00AFB315 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27F977231E1B933C00AFB315 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27F977241E1B933C00AFB315 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27F9772A1E1B933C00AFB315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27F9772C1E1B933C00AFB315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27F9772F1E1B933C00AFB315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27F977311E1B933C00AFB315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DB0997989D2CDB9B974C2FA /* Pods-HibikiDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HibikiDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HibikiDemo/Pods-HibikiDemo.release.xcconfig"; sourceTree = "<group>"; };
+		87AB18B986ED633B11439023 /* Pods-HibikiDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HibikiDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HibikiDemo/Pods-HibikiDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8A81CE2892FAB6FBE411FB06 /* Pods-HibikiDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HibikiDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HibikiDemo/Pods-HibikiDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F7F281301EB45F8E000C5561 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		F7F281311EB45F8E000C5561 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		F7F2817D1EB6E39B000C5561 /* HibikiPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HibikiPhotoViewer.h; sourceTree = "<group>"; };
+		F7F2817E1EB6E39B000C5561 /* HibikiPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HibikiPhotoViewer.m; sourceTree = "<group>"; };
+		F7F2817F1EB6E39B000C5561 /* HibikiPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HibikiPhoto.h; sourceTree = "<group>"; };
+		F7F281801EB6E39B000C5561 /* HibikiPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HibikiPhoto.m; sourceTree = "<group>"; };
+		F7F281811EB6E39B000C5561 /* HibikiPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HibikiPhotoView.h; sourceTree = "<group>"; };
+		F7F281821EB6E39B000C5561 /* HibikiPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HibikiPhotoView.m; sourceTree = "<group>"; };
+		F7F281831EB6E39B000C5561 /* HibikiProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HibikiProgressLayer.h; sourceTree = "<group>"; };
+		F7F281841EB6E39B000C5561 /* HibikiProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HibikiProgressLayer.m; sourceTree = "<group>"; };
+		F7F281891EB6E3F5000C5561 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7F2818B1EB6E3FE000C5561 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F7F2818D1EB6E405000C5561 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F7F2818F1EB6E40B000C5561 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F7F281911EB6E412000C5561 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		F7F281931EB6E418000C5561 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F7F281951EB6E41F000C5561 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F7F281971EB6E429000C5561 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F7F281991EB6E42F000C5561 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F906D7AF20B1A397005BB60E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27F9771A1E1B933C00AFB315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F2819A1EB6E42F000C5561 /* libz.tbd in Frameworks */,
+				F7F281981EB6E429000C5561 /* libsqlite3.tbd in Frameworks */,
+				F7F281961EB6E41F000C5561 /* MobileCoreServices.framework in Frameworks */,
+				F7F281941EB6E418000C5561 /* Accelerate.framework in Frameworks */,
+				F7F281921EB6E412000C5561 /* ImageIO.framework in Frameworks */,
+				F7F281901EB6E40B000C5561 /* AssetsLibrary.framework in Frameworks */,
+				F7F2818E1EB6E405000C5561 /* QuartzCore.framework in Frameworks */,
+				F7F2818C1EB6E3FE000C5561 /* CoreFoundation.framework in Frameworks */,
+				F7F2818A1EB6E3F5000C5561 /* UIKit.framework in Frameworks */,
+				212C62C72CBA4F9B6A90C395 /* Pods_HibikiDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27F977141E1B933C00AFB315 = {
+			isa = PBXGroup;
+			children = (
+				27F9771F1E1B933C00AFB315 /* HibikiDemo */,
+				27F9771E1E1B933C00AFB315 /* Products */,
+				4B64BE3206B6C2C961E856D4 /* Frameworks */,
+				E2546C07CAAEFD3DEF3BF855 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		27F9771E1E1B933C00AFB315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27F9771D1E1B933C00AFB315 /* HibikiDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27F9771F1E1B933C00AFB315 /* HibikiDemo */ = {
+			isa = PBXGroup;
+			children = (
+				27F977231E1B933C00AFB315 /* AppDelegate.h */,
+				27F977241E1B933C00AFB315 /* AppDelegate.m */,
+				27B963931E1BACE600F32BAE /* DemoViewController.h */,
+				27B963941E1BACE600F32BAE /* DemoViewController.m */,
+				27B963951E1BACE600F32BAE /* PreviewViewController.h */,
+				27B963961E1BACE600F32BAE /* PreviewViewController.m */,
+				F7F281301EB45F8E000C5561 /* PhotoCell.h */,
+				F7F281311EB45F8E000C5561 /* PhotoCell.m */,
+				F7F2817C1EB6E39B000C5561 /* Framework */,
+				F906D7B220B1A46D005BB60E /* Resources */,
+				27F977201E1B933C00AFB315 /* Supporting Files */,
+			);
+			path = HibikiDemo;
+			sourceTree = "<group>";
+		};
+		27F977201E1B933C00AFB315 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F906D7AF20B1A397005BB60E /* Default-568h@2x.png */,
+				27F977311E1B933C00AFB315 /* Info.plist */,
+				27F977211E1B933C00AFB315 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B64BE3206B6C2C961E856D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7F281991EB6E42F000C5561 /* libz.tbd */,
+				F7F281971EB6E429000C5561 /* libsqlite3.tbd */,
+				F7F281951EB6E41F000C5561 /* MobileCoreServices.framework */,
+				F7F281931EB6E418000C5561 /* Accelerate.framework */,
+				F7F281911EB6E412000C5561 /* ImageIO.framework */,
+				F7F2818F1EB6E40B000C5561 /* AssetsLibrary.framework */,
+				F7F2818D1EB6E405000C5561 /* QuartzCore.framework */,
+				F7F2818B1EB6E3FE000C5561 /* CoreFoundation.framework */,
+				F7F281891EB6E3F5000C5561 /* UIKit.framework */,
+				0C0FBAA713F89E6AAEE6F453 /* Pods_HibikiDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2546C07CAAEFD3DEF3BF855 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87AB18B986ED633B11439023 /* Pods-HibikiDemo.debug.xcconfig */,
+				7DB0997989D2CDB9B974C2FA /* Pods-HibikiDemo.release.xcconfig */,
+				8A81CE2892FAB6FBE411FB06 /* Pods-HibikiDemo.debug.xcconfig */,
+				25A29A9B91369576BA05CAF4 /* Pods-HibikiDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7F2817C1EB6E39B000C5561 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F7F2817D1EB6E39B000C5561 /* HibikiPhotoViewer.h */,
+				F7F2817E1EB6E39B000C5561 /* HibikiPhotoViewer.m */,
+				F7F2817F1EB6E39B000C5561 /* HibikiPhoto.h */,
+				F7F281801EB6E39B000C5561 /* HibikiPhoto.m */,
+				F7F281811EB6E39B000C5561 /* HibikiPhotoView.h */,
+				F7F281821EB6E39B000C5561 /* HibikiPhotoView.m */,
+				F7F281831EB6E39B000C5561 /* HibikiProgressLayer.h */,
+				F7F281841EB6E39B000C5561 /* HibikiProgressLayer.m */,
+				27AE692F1ED2C19600AFD107 /* HibikiImageManagerProtocol.h */,
+				27AE692A1ED29B1F00AFD107 /* HibikiImageManager.h */,
+				27AE692D1ED2B8FC00AFD107 /* HibikiImageManager.m */,
+			);
+			name = Framework;
+			path = ../../Hibiki;
+			sourceTree = "<group>";
+		};
+		F906D7B220B1A46D005BB60E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27F9772C1E1B933C00AFB315 /* Assets.xcassets */,
+				27F977291E1B933C00AFB315 /* Main.storyboard */,
+				27F9772E1E1B933C00AFB315 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27F9771C1E1B933C00AFB315 /* HibikiDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27F977341E1B933C00AFB315 /* Build configuration list for PBXNativeTarget "HibikiDemo" */;
+			buildPhases = (
+				45C69FD0896EBE3C7FCA7ED3 /* [CP] Check Pods Manifest.lock */,
+				27F977191E1B933C00AFB315 /* Sources */,
+				27F9771A1E1B933C00AFB315 /* Frameworks */,
+				27F9771B1E1B933C00AFB315 /* Resources */,
+				312227AB74CE173297F78FF7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HibikiDemo;
+			productName = HibikiDemo;
+			productReference = 27F9771D1E1B933C00AFB315 /* HibikiDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27F977151E1B933C00AFB315 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Kyle Sun";
+				TargetAttributes = {
+					27F9771C1E1B933C00AFB315 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 8T2F9MTMLW;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 27F977181E1B933C00AFB315 /* Build configuration list for PBXProject "HibikiDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27F977141E1B933C00AFB315;
+			productRefGroup = 27F9771E1E1B933C00AFB315 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27F9771C1E1B933C00AFB315 /* HibikiDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27F9771B1E1B933C00AFB315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F977301E1B933C00AFB315 /* LaunchScreen.storyboard in Resources */,
+				F906D7B020B1A397005BB60E /* Default-568h@2x.png in Resources */,
+				27F9772D1E1B933C00AFB315 /* Assets.xcassets in Resources */,
+				27F9772B1E1B933C00AFB315 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		312227AB74CE173297F78FF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HibikiDemo/Pods-HibikiDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HibikiDemo/Pods-HibikiDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45C69FD0896EBE3C7FCA7ED3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HibikiDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27F977191E1B933C00AFB315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F281871EB6E39B000C5561 /* HibikiPhotoView.m in Sources */,
+				27B963971E1BACE600F32BAE /* DemoViewController.m in Sources */,
+				27F977251E1B933C00AFB315 /* AppDelegate.m in Sources */,
+				27F977221E1B933C00AFB315 /* main.m in Sources */,
+				27B963981E1BACE600F32BAE /* PreviewViewController.m in Sources */,
+				F7F281861EB6E39B000C5561 /* HibikiPhoto.m in Sources */,
+				27AE692E1ED2B8FC00AFD107 /* HibikiImageManager.m in Sources */,
+				F7F281321EB45F8E000C5561 /* PhotoCell.m in Sources */,
+				F7F281881EB6E39B000C5561 /* HibikiProgressLayer.m in Sources */,
+				F7F281851EB6E39B000C5561 /* HibikiPhotoViewer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27F977291E1B933C00AFB315 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27F9772A1E1B933C00AFB315 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27F9772E1E1B933C00AFB315 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27F9772F1E1B933C00AFB315 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27F977321E1B933C00AFB315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27F977331E1B933C00AFB315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27F977351E1B933C00AFB315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87AB18B986ED633B11439023 /* Pods-HibikiDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_STICKER_PACK_IDENTIFIER_PREFIX = "$(PRODUCT_BUNDLE_IDENTIFIER).stickers";
+				DEVELOPMENT_TEAM = 8T2F9MTMLW;
+				INFOPLIST_FILE = "$(SRCROOT)/HibikiDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsexceptional.hibiki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27F977361E1B933C00AFB315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB0997989D2CDB9B974C2FA /* Pods-HibikiDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_STICKER_PACK_IDENTIFIER_PREFIX = "$(PRODUCT_BUNDLE_IDENTIFIER).stickers";
+				DEVELOPMENT_TEAM = 8T2F9MTMLW;
+				INFOPLIST_FILE = "$(SRCROOT)/HibikiDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsexceptional.hibiki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27F977181E1B933C00AFB315 /* Build configuration list for PBXProject "HibikiDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27F977321E1B933C00AFB315 /* Debug */,
+				27F977331E1B933C00AFB315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27F977341E1B933C00AFB315 /* Build configuration list for PBXNativeTarget "HibikiDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27F977351E1B933C00AFB315 /* Debug */,
+				27F977361E1B933C00AFB315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27F977151E1B933C00AFB315 /* Project object */;
+}
