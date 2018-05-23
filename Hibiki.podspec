@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Hibiki"
-  s.version      = "0.1"
+  s.version      = "0.1.1"
   s.summary      = "An image viewer browser based on KSPhotoBrowser supporting infinite scroll."
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Kyle Sun" => "skx926@gmail.com", "Philip Kluz" => "philip.kluz@gmail.com" }

@@ -23,6 +23,8 @@
 
 @implementation PreviewViewController
 
+#pragma mark - UIViewController
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,7 +46,24 @@
     [HibikiPhotoViewer setImageManagerClass:HibikiImageManager.class];
 }
 
-// MARK: - HibikiPhotoViewerDelegate
+#pragma mark - PreviewViewController
+
+// If you need to retireve the url lazily... (1/2)
+//
+//- (void)urlForItemAtIndex:(NSUInteger)index completion:(PreviewViewControllerURLRequestCompletion)completion
+//{
+//    if (completion == nil) {
+//        return;
+//    }
+//
+//    NSURL *url = [NSURL URLWithString:[self.urls[index] stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
+//
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        completion(url);
+//    });
+//}
+
+#pragma mark - HibikiPhotoViewerDelegate
 
 - (void)photoViewer:(HibikiPhotoViewer *)browser didSelectItem:(HibikiPhoto *)item atIndex:(NSUInteger)index
 {
@@ -57,6 +76,14 @@
     NSURL *url = [NSURL URLWithString:[self.urls[index] stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
     HibikiPhoto *photo = [[HibikiPhoto alloc] initWithSourceView:cell.imageView imageUrl:url];
     
+    // If you need to retireve the url lazily... (2/2)
+    //
+    //    __weak typeof(photo) wphoto = photo;
+    //    [self urlForItemAtIndex:index completion:^(NSURL *maybeUrl) {
+    //        __strong typeof(wphoto) sphoto = wphoto;
+    //        sphoto.imageUrl = maybeUrl;
+    //    }];
+
     return photo;
 }
 
@@ -66,7 +93,7 @@
 }
 
 
-// MARK: - CollectionViewDataSource
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -80,7 +107,7 @@
     return cell;
 }
 
-// MARK: - CollectionViewDelegate
+#pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {

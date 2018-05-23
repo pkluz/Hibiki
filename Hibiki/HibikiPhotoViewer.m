@@ -711,6 +711,21 @@ static Class imageManagerClass = nil;
     
     return photo;
 }
+//
+//#pragma mark - HibikiPhotoDelegate
+//
+//- (void)photo:(HibikiPhoto *)photo isLoadingFinished:(BOOL)finished {
+//    // NOOP
+//}
+//
+//- (void)photo:(HibikiPhoto *)photo didUpdateUrl:(NSURL *)url {
+//    NSUInteger index = [self.photoItems indexOfObject:photo];
+//
+//    if (index != NSNotFound) {
+//        HibikiPhotoView *view = [self photoViewForPage:index];
+//        [self configPhotoView:view withItem:photo];
+//    }
+//}
 
 #pragma mark - UIScrollViewDelegate
 

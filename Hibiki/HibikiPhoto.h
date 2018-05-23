@@ -11,8 +11,17 @@
 
 @import UIKit;
 
-
 NS_ASSUME_NONNULL_BEGIN
+
+@class HibikiPhoto;
+
+@protocol HibikiPhotoDelegate<NSObject>
+
+#pragma mark - Properties
+- (void)photo:(HibikiPhoto *)photo didUpdateUrl:(NSURL *)url;
+- (void)photo:(HibikiPhoto *)photo isLoadingFinished:(BOOL)finished;
+
+@end
 
 @interface HibikiPhoto : NSObject
 
@@ -20,8 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readwrite, nullable) UIView *sourceView;
 @property (nonatomic, strong, readonly, nullable) UIImage *thumbImage;
 @property (nonatomic, strong, readonly, nullable) UIImage *image;
-@property (nonatomic, strong, readonly, nullable) NSURL *imageUrl;
+@property (nonatomic, strong, readwrite, nullable) NSURL *imageUrl;
 @property (nonatomic, assign, readwrite) BOOL finished;
+@property (nonatomic, weak, readwrite) id<HibikiPhotoDelegate> delegate;
 
 #pragma mark - Methods
 - (instancetype)initWithSourceView:(nullable UIView *)view thumbImage:(nullable UIImage *)image imageUrl:(nullable NSURL *)url;

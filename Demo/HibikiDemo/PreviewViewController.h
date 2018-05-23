@@ -13,6 +13,8 @@
 
 #import "HibikiPhotoViewer.h"
 
+typedef void(^PreviewViewControllerURLRequestCompletion)(NSURL *);
+
 @interface PreviewViewController : UIViewController
 
 #pragma mark - Properies

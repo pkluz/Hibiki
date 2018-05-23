@@ -23,13 +23,14 @@
 const CGFloat kHibikiPhotoViewPadding = 10;
 const CGFloat kHibikiPhotoViewMaxScale = 3;
 
-@interface HibikiPhotoView ()<UIScrollViewDelegate, UIGestureRecognizerDelegate>
+@interface HibikiPhotoView ()<UIScrollViewDelegate, UIGestureRecognizerDelegate, HibikiPhotoDelegate>
 
 #pragma mark - Properties
 @property (nonatomic, strong, readwrite) YYAnimatedImageView *imageView;
 @property (nonatomic, strong, readwrite) HibikiProgressLayer *progressLayer;
 @property (nonatomic, strong, readwrite) HibikiPhoto *item;
-@property (nonatomic, strong) id<HibikiImageManager> imageManager;
+@property (nonatomic, strong, readwrite) id<HibikiImageManager> imageManager;
+@property (nonatomic, assign, readwrite) BOOL loadDeterminate;
 
 @end
 
@@ -72,6 +73,8 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
 
 - (void)setItem:(HibikiPhoto *)item determinate:(BOOL)determinate
 {
+    item.delegate = self;
+    _loadDeterminate = determinate;
     _item = item;
     [_imageManager cancelImageRequestForImageView:_imageView];
     if (item) {
@@ -85,7 +88,7 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
         }
         __weak typeof(self) wself = self;
         HibikiImageManagerProgressBlock progressBlock = nil;
-        if (determinate) {
+        if (_loadDeterminate) {
             progressBlock = ^(NSInteger receivedSize, NSInteger expectedSize) {
                 __strong typeof(wself) sself = wself;
                 double progress = (double)receivedSize / expectedSize;
@@ -198,6 +201,18 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
         }
     }
     return YES;
+}
+
+#pragma mark - HibikiPhotoDelegate
+
+- (void)photo:(HibikiPhoto *)photo isLoadingFinished:(BOOL)finished
+{
+    // NOOP
+}
+
+- (void)photo:(HibikiPhoto *)photo didUpdateUrl:(NSURL *)url
+{
+    [self setItem:photo determinate:_loadDeterminate];
 }
 
 @end

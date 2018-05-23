@@ -16,7 +16,6 @@
 #pragma mark - Properties
 @property (nonatomic, strong, readwrite) UIImage *thumbImage;
 @property (nonatomic, strong, readwrite) UIImage *image;
-@property (nonatomic, strong, readwrite) NSURL *imageUrl;
 
 @end
 
@@ -69,6 +68,28 @@
     }
     
     return self;
+}
+
+- (void)setFinished:(BOOL)finished
+{
+    if (_finished != finished) {
+        _finished = finished;
+        
+        if ([self.delegate respondsToSelector:@selector(photo:isLoadingFinished:)]) {
+            [self.delegate photo:self isLoadingFinished:_finished];
+        }
+    }
+}
+
+- (void)setImageUrl:(NSURL *)imageUrl
+{
+    if (_imageUrl != imageUrl) {
+        _imageUrl = imageUrl;
+        
+        if ([self.delegate respondsToSelector:@selector(photo:didUpdateUrl:)]) {
+            [self.delegate photo:self didUpdateUrl:_imageUrl];
+        }
+    }
 }
 
 @end
