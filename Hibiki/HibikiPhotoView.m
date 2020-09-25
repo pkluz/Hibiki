@@ -14,10 +14,10 @@
 #import "HibikiProgressLayer.h"
 #import "HibikiImageManagerProtocol.h"
 
-#if __has_include(<YYWebImage/YYWebImage.h>)
-#import <YYWebImage/YYWebImage.h>
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
 #else
-#import "YYWebImage.h"
+#import "SDWebImage.h"
 #endif
 
 const CGFloat kHibikiPhotoViewPadding = 10;
@@ -26,7 +26,7 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
 @interface HibikiPhotoView ()<UIScrollViewDelegate, UIGestureRecognizerDelegate, HibikiPhotoDelegate>
 
 #pragma mark - Properties
-@property (nonatomic, strong, readwrite) YYAnimatedImageView *imageView;
+@property (nonatomic, strong, readwrite) SDAnimatedImageView *imageView;
 @property (nonatomic, strong, readwrite) HibikiProgressLayer *progressLayer;
 @property (nonatomic, strong, readwrite) HibikiPhoto *item;
 @property (nonatomic, strong, readwrite) id<HibikiImageManager> imageManager;
@@ -53,7 +53,7 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
         
-        _imageView = [[YYAnimatedImageView alloc] init];
+        _imageView = [[SDAnimatedImageView alloc] init];
         _imageView.backgroundColor = [UIColor darkGrayColor];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         _imageView.clipsToBounds = YES;
@@ -63,6 +63,7 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
         _progressLayer = [[HibikiProgressLayer alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         _progressLayer.position = CGPointMake(frame.size.width/2, frame.size.height/2);
         _progressLayer.hidden = YES;
+        self.userInteractionEnabled = YES;
         [self.layer addSublayer:_progressLayer];
         
         _imageManager = imageManager;
@@ -83,6 +84,7 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
             _item.finished = YES;
             [_progressLayer stopSpinning];
             _progressLayer.hidden = YES;
+            self.userInteractionEnabled = YES;
             [self resizeImageView];
             return;
         }
@@ -93,12 +95,14 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
                 __strong typeof(wself) sself = wself;
                 double progress = (double)receivedSize / expectedSize;
                 sself.progressLayer.hidden = NO;
+                sself.userInteractionEnabled = NO;
                 sself.progressLayer.strokeEnd = MAX(progress, 0.01);
             };
         } else {
             [_progressLayer startSpinning];
         }
         _progressLayer.hidden = NO;
+        self.userInteractionEnabled = NO;
         
         _imageView.image = item.thumbImage;
         [_imageManager setImageForImageView:_imageView
@@ -112,11 +116,13 @@ const CGFloat kHibikiPhotoViewMaxScale = 3;
                                      }
                                      [sself.progressLayer stopSpinning];
                                      sself.progressLayer.hidden = YES;
+                                     sself.userInteractionEnabled = YES;
                                      sself.item.finished = YES;
                                  }];
     } else {
         [_progressLayer stopSpinning];
         _progressLayer.hidden = YES;
+        self.userInteractionEnabled = YES;
         _imageView.image = nil;
     }
     [self resizeImageView];

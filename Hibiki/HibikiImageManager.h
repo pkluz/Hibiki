@@ -11,10 +11,10 @@
 
 #import "HibikiImageManagerProtocol.h"
 
-#if __has_include(<YYWebImage/YYWebImage.h>)
-#import <YYWebImage/YYWebImage.h>
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
 #else
-#import "YYWebImage.h"
+#import "SDWebImage.h"
 #endif
 
 @interface HibikiImageManager : NSObject <HibikiImageManager>

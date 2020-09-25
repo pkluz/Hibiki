@@ -10,7 +10,7 @@
 //
 
 #import "PreviewViewController.h"
-#import "YYWebImage.h"
+#import "SDWebImage.h"
 #import "PhotoCell.h"
 
 @interface PreviewViewController ()<HibikiPhotoViewerDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
@@ -103,7 +103,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
-    cell.imageView.yy_imageURL = [NSURL URLWithString:_urls[indexPath.row]];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_urls[indexPath.row]]];
     return cell;
 }
 

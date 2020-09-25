@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 extern const CGFloat kHibikiPhotoViewPadding;
 
-@class YYAnimatedImageView;
+@class SDAnimatedImageView;
 @class HibikiProgressLayer;
 @class HibikiPhoto;
 
@@ -24,7 +24,7 @@ extern const CGFloat kHibikiPhotoViewPadding;
 @interface HibikiPhotoView : UIScrollView
 
 #pragma mark - Properties
-@property (nonatomic, strong, readonly) YYAnimatedImageView *imageView;
+@property (nonatomic, strong, readonly) SDAnimatedImageView *imageView;
 @property (nonatomic, strong, readonly) HibikiProgressLayer *progressLayer;
 @property (nonatomic, strong, readonly) HibikiPhoto *item;
 

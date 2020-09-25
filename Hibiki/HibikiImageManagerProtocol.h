@@ -25,6 +25,4 @@ typedef void (^HibikiImageManagerCompletionBlock)(UIImage * _Nullable image, NSU
 
 - (void)cancelImageRequestForImageView:(nullable UIImageView *)imageView;
 
-- (UIImage *_Nullable)imageFromMemoryForURL:(nullable NSURL *)url;
-
 @end

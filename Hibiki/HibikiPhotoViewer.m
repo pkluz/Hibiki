@@ -13,10 +13,10 @@
 #import "HibikiProgressLayer.h"
 #import "HibikiPhotoView.h"
 
-#if __has_include(<YYWebImage/YYWebImage.h>)
-#import <YYWebImage/YYWebImage.h>
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
 #else
-#import "YYWebImage.h"
+#import "SDWebImage.h"
 #endif
 
 static const NSTimeInterval kAnimationDuration = 0.3;
@@ -90,12 +90,8 @@ static Class imageManagerClass = nil;
     HibikiPhoto *item = [self photoAtIndex:_currentPage];
     HibikiPhotoView *photoView = [self photoViewForPage:_currentPage];
     
-    if ([_imageManager imageFromMemoryForURL:item.imageUrl]) {
-        [self configPhotoView:photoView withItem:item];
-    } else {
-        photoView.imageView.image = item.thumbImage;
-        [photoView resizeImageView];
-    }
+    photoView.imageView.image = item.thumbImage;
+    [photoView resizeImageView];
     
     CGRect endRect = photoView.imageView.frame;
     CGRect sourceRect;
@@ -431,7 +427,7 @@ static Class imageManagerClass = nil;
 - (void)blurBackgroundWithImage:(UIImage *)image animated:(BOOL)animated
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *blurImage = [image yy_imageByBlurDark];
+        UIImage *blurImage = [image sd_blurredImageWithRadius:30.0];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (animated) {
                 [UIView animateWithDuration:kAnimationDuration animations:^{

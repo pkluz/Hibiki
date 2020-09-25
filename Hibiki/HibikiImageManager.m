@@ -21,41 +21,24 @@
                     progress:(HibikiImageManagerProgressBlock)progress
                   completion:(HibikiImageManagerCompletionBlock)completion
 {
-    YYWebImageProgressBlock progressBlock = ^(NSInteger receivedSize, NSInteger expectedSize) {
+    [imageView sd_setImageWithURL:imageURL
+                 placeholderImage:placeholder
+                          options:0
+                         progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         if (progress) {
             progress(receivedSize, expectedSize);
         }
-    };
-    
-    YYWebImageCompletionBlock completionBlock = ^(UIImage *image,
-                                                  NSURL *url,
-                                                  YYWebImageFromType from,
-                                                  YYWebImageStage stage,
-                                                  NSError *error) {
+    } completed: ^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (completion) {
-            BOOL success = (stage == YYWebImageStageFinished) && !error;
-            completion(image, url, success, error);
+            BOOL success = !error;
+            completion(image, imageURL, success, error);
         }
-    };
-    
-    [imageView yy_setImageWithURL:imageURL
-                      placeholder:placeholder
-                          options:kNilOptions
-                         progress:progressBlock
-                        transform:nil
-                       completion:completionBlock];
+    }];
 }
 
 - (void)cancelImageRequestForImageView:(UIImageView *)imageView
 {
-    [imageView yy_cancelCurrentImageRequest];
-}
-
-- (UIImage *)imageFromMemoryForURL:(NSURL *)url
-{
-    YYWebImageManager *manager = [YYWebImageManager sharedManager];
-    NSString *key = [manager cacheKeyForURL:url];
-    return [manager.cache getImageForKey:key withType:YYImageCacheTypeMemory];
+    [imageView sd_cancelCurrentImageLoad];
 }
 
 @end

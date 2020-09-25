@@ -11,7 +11,6 @@
 
 #import "DemoViewController.h"
 #import "PreviewViewController.h"
-#import "YYWebImage.h"
 
 @interface DemoViewController ()
 
@@ -42,8 +41,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 7) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        [[YYWebImageManager sharedManager].cache.memoryCache removeAllObjects];
-        [[YYWebImageManager sharedManager].cache.diskCache removeAllObjects];
+        [[SDWebImageManager sharedManager].imageCache clearWithCacheType:SDImageCacheTypeAll completion:nil];
     }
 }
 

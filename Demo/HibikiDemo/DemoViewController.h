@@ -10,6 +10,7 @@
 //
 
 @import UIKit;
+@import SDWebImage;
 
 @interface DemoViewController : UITableViewController
 
